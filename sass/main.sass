@@ -1,0 +1,508 @@
+@import "bourbon/bourbon.scss"
+$text_color: #333
+$dark_color: #000
+$red_color: #9b1818
+$blue_color: #003469
+$green_color: #67bc5c
+body
+	position: relative
+	min-width: 320px
+	max-width: 1285 !important
+	font-family: "RobotoRegular", 'Arial', sans-serif
+	font-weight: normal
+	font-size: 14px
+	color: $text_color
+	line-height: 1.6
+	-webkit-font-smoothing: antialised
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+	border: 3px solid $red_color
+body input:required:valid,
+body textarea:required:valid
+	color: green
+h1
+	margin: 0
+	font-family: 'CleanvertisingLight', 'Arial', sans-serif
+	color: #fff
+	font-size: 61px
+	line-height: 56px
+section,
+footer
+	padding: 58px 0 76px 0
+	&.s_dark
+		h2, h3, p
+			color: #fff
+	h2
+		margin-top: 0
+		color: $blue_color
+		font-size: 50px
+		font-weight: normal
+		line-height: 56px
+		margin-bottom: 50px
+		font-family: 'CleanvertisingLight', 'Arial', sans-serif
+		text-align: center
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus
+	outline: none
+	border: none
+.hidden
+	display: none
+.button
+	border: none
+	display: inline-block
+	height: 47px
+	padding: 0 35px
+	line-height: 47px
+	font-family: 'RobotoBold', 'Arial', sans-serif
+	font-size: 16px
+	text-align: center
+	color: #fff
+	text-transform: uppercase
+	text-decoration: none
+	border-radius: 3px
+	background-color: #000
+	cursor: pointer
+	&.btn_red
+		background-color: $red_color
+	&.btn_red:hover
+		color: #fff
+	&.btn_red:visited
+		color: #fff
+		outline: none
+		text-decoration: none
+	&.btn_red:focus
+		color: #fff
+		outline: none
+		text-decoration: none
+	&.btn_green
+		background-color: $green_color
+	&.btn_green:hover
+		color: #fff
+	&.btn_white
+		background-color: #fff
+		color: #000
+	&.btn_green:hover
+		color: #000
+	&:hover
+		text-decoration: none
+
+//Стили для шапки сайта
+
+header
+	min-height: 640px
+	padding-top: 32px
+	padding-bottom: 40px
+	color: #fff
+	background: #8c878a url('../img/top_bg.jpg') no-repeat top center
+	background-size: cover
+	clear: both
+.logo
+	font-size: 40px
+	font-family: 'RobotoBold', 'Arial', sans-serif
+	font-weight: bold
+
+.top_phone
+	text-align: right
+	.tab
+		font-family: 'RobotoRegular', 'Arial', sans-serif
+		font-size: 16px
+		line-height: 45px
+		text-transform: uppercase
+		cursor: pointer
+	.wrapper .active
+		position: relative
+	.wrapper .active::after
+		display: block
+		position: absolute
+		bottom: 1px
+		left: 0
+		content: ""
+		height: 1px
+		width: 100%
+		background-color: #fff
+	.tab_item
+		font-size: 35px
+		font-family: 'RobotoBold', 'Arial', sans-serif
+		line-height: 45px
+.tab_item:first-child
+	display: block
+.tab_item
+	display: none
+.top_header
+	margin-top: 60px
+	h2
+		margin: 10px 0 0 0
+		font-family: 'CleanvertisingLight', 'Arial', sans-serif
+		font-size: 37px
+		line-height: 56px
+
+.tabs_header
+	margin-top: 25px
+	.tabs
+		min-width: 274px
+		.tab
+			display: inline-block
+			float: left
+			padding: 16px 25px
+			background-color: rgba(255,255,255,.25)
+			text-transform: uppercase
+			cursor: pointer
+			font-size: 16px
+			font-family: 'RobotoBold', 'Arial', sans-serif
+			+transition(all .25s ease)
+			&.active
+				background-color: rgba(255,255,255,.6)
+				color: $dark_color
+	.tab_content
+		padding: 22px 25px 20px 25px
+		color: $dark_color
+		text-transform: uppercase
+		font-size: 18px
+		line-height: 25px
+		font-family: 'RobotoBold', 'Arial', sans-serif
+		text-align: right
+		background-color: rgba(255,255,255,.6)
+	.tab_item
+		text-align: left
+	li
+		position: relative
+		padding-left: 50px
+		margin-bottom: 12px
+	i
+		position: absolute
+		left: 5px
+		top: 0
+		line-height: 25px
+		font-size: 32px
+		color: rgba(0,0,0,.4)
+
+//Стили для полоски преимуществ
+.s_tizers
+	padding: 46px 0 0 0
+	color: $blue_color
+	font-family: 'CleanvertisingLight', 'Arial', sans-serif
+	text-transform: uppercase
+	+linear-gradient(#c6d8ee,#e8eff7)
+	clear: both
+	span
+		font-size: 14px
+		display: block
+	strong
+		font-weight: normal
+		font-size: 23px
+		display: block
+	.row
+		> div
+			margin-bottom: 35px
+.tiz_img,
+.tiz_descr
+	display: inline-block
+	vertical-align: bottom
+.tiz_img
+	i
+		font-size: 70px
+		line-height: 60px
+		margin-right: 10px
+.s_tizers .row
+	> div:nth-child(1)
+		i
+			margin-right: 22px
+			font-family: 'RobotoRegular', 'Arial', sans-serif
+			font-size: 75px
+			letter-spacing: -13px
+		span
+			font-size: 19px
+			line-height: 26px
+		strong
+			line-height: 30px
+			font-size: 25px
+	> div:nth-child(2)
+		i
+			color: $dark_color
+		span
+			font-size: 14px
+			line-height: 12px
+		strong
+			line-height: 38px
+			font-size: 25px
+	> div:nth-child(3)
+		i
+			color: $dark_color
+			line-height: 51px
+		span
+			line-height: 29px
+		strong
+			line-height: 26px
+	> div:nth-child(4)
+		i
+			margin-right: 7px
+
+		span
+			font-size: 13px
+			line-height: 18px
+		strong
+			font-size: 22px
+
+//Секция с преимуществами и формой
+.s_prof
+	strong
+		font-family: 'RobotoBold', 'Arial', sans-serif
+		font-weight: normal
+form
+	padding: 26px 25px 45px 25px
+	background: #f7f7f7
+	border: 5px solid #67bc5c
+	border-radius: 5px
+	clear: both
+	h2
+		margin: 0 0 18px 0
+		font-family: 'RobotoBold', 'Arial', sans-serif
+		font-size: 22px
+		line-height: 26px
+		text-transform: uppercase
+		color: #444
+	label
+		display: block
+		margin-bottom: 8px
+		font-size: 14px
+		line-height: 26px
+		color: #666
+		position: relative
+		&:last-of-type::after
+			position: absolute
+			right: 10px
+			bottom: 8px
+			display: block
+			content: ""
+			height: 0
+			width: 0
+			border: 8px solid #d9d9d9
+			border-left-color: transparent
+			border-right-color: transparent
+			border-bottom-color: transparent
+	input,
+	select
+		display: block
+		box-sizing: border-box
+		margin-top: 3px
+		padding: 0 12px
+		height: 42px
+		font-size: 20px
+		line-height: 42px
+		border: 1px solid #d9d9d9
+		border-radius: 2px
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, .06)
+		width: 100%
+		&:focus
+			border: 3px solid $green_color
+	select
+		-webkit-appearance: none
+		-moz-appearance: none
+		-ms-appearance: none
+		appearance: none
+	button
+		margin-top: 28px
+		line-height: 47px
+.btn_wrap
+	text-align: center
+.prof_item
+	margin-bottom: 53px
+.prof_left
+	margin-bottom: 10px
+	i
+		font-size: 107px
+		line-height: 71px
+		color: $red_color
+.prof_right
+	p
+		margin: 8px 0 0 0
+		font-size: 16px
+		line-height: 24px
+	h3
+		display: inline-block
+		margin: 0
+		color: $red_color
+		font-size: 30px
+		line-height: 8px
+// Секция со слайдером
+.s_review
+	background-color: #131412
+	background-image: url('../img/middle_bg.jpg')
+	background-repeat: repeat
+	background-attachment: fixed
+	min-height: 500px
+	background-position: top center
+	background-size: cover
+	color: #fff
+	.review_item
+		color: #fff
+		text-align: center
+		h4
+			position: relative
+			margin-top: 5px
+			font-family: "Times New Roman", serif
+			font-style: italic
+			font-size: 22px
+			line-height: 56px
+			font-weight: normal
+			&::after
+				display: block
+				content: ""
+				position: absolute
+				left: 50%
+				top: 61px
+				margin-left: -40px
+				height: 1px
+				width: 80px
+				background-color: #cea380
+		p
+			display: inline-block
+			float: none
+			margin: auto
+			font-size: 15px
+			line-height: 24px
+		.image_wrap
+			img
+				display: inline-block
+				height: 165px
+				width: 165px
+				border: 10px solid rgba(255,255,255,.28)
+				border-radius: 50%
+.owl-nav
+	div
+		position: absolute
+		top: 20px
+		width: 37px
+		height: 140px
+		background-image: url('../img/arrows.png')
+		opacity: .6
+		&:hover
+			opacity: 1
+		&.owl-next
+			right: 0
+			background-position: top right
+.owl-dots
+	width: 100%
+	margin-top: 30px
+	text-align: center
+	.owl-dot
+		width: 14px
+		height: 14px
+		background-color: #fff
+		display: inline-block
+		margin: 0 4px
+		border-radius: 50%
+		opacity: .5
+		&.active
+			opacity: .8
+
+//Стили для красной секции с кнопкой
+.s_back
+	padding-top: 39px
+	padding-bottom: 32px
+	background: #8b161b url("../img/red_bg.jpg") top center repeat
+	text-align: center
+	h3
+		max-width: 1100px
+		padding: 9px 17px 18px 25px
+		margin: 0 auto 27px auto
+		color: #fff
+		font-size: 26px
+		line-height: 36px
+		font-weight: normal
+		text-align: center
+		text-transform: uppercase
+		background-color: rgba(255,255,255,.13)
+.s_contacts
+	padding-bottom: 0
+	text-align: center
+	h2
+		display: inline-block
+		vertical-align: middle
+		height: 45px
+		margin-bottom: 0
+		line-height: 45px
+		color: #111
+	.tabs
+		display: inline-block
+		vertical-align: middle
+		height: 45px
+		margin-left: 20px
+	.wrapper
+		margin-top: 16px
+	.tab
+		float: left
+		padding: 0 70px
+		line-height: 42px
+		color: $red_color
+		border: 5px solid $red_color
+		box-sizing: border-box
+		&:first-child
+			border-radius: 3px 0 0 3px
+		&:last-child
+			padding: 0 52px
+			border-radius: 0 3px 3px 0
+		&.active
+			background-color: $red_color
+			color: #fff
+	.tab_item
+		font-size: 18px
+	.map
+		min-height: 497px
+		margin-top: 27px
+		background-color: #e1d6b0
+
+//Футер
+footer
+	padding: 80px 0 76px 0
+	text-align: center
+	h2
+		color: #000
+		margin-bottom: 29px
+	p
+		margin-bottom: 46px
+		font-size: 18px
+		line-height: 24px
+		color: $text_color
+		text-align: center
+	.bottom_phone
+		margin-bottom: 45px
+		color: $red_color
+		text-align: center
+		.tab
+			font-size: 16px
+			line-height: 45px
+			cursor: pointer
+			text-transform: uppercase
+		.tab_item
+			font-family: 'RobotoBold', 'Arial', sans-serif
+			font-size: 35px
+			line-height: 32px
+	.bottom_phone .active
+		position: relative
+	.bottom_phone .active::after
+		background-color: $red_color
+		bottom: 1px
+		content: ""
+		display: block
+		height: 1px
+		left: 0
+		position: absolute
+		width: 100%
+//Стили скрытого контента
+#hidden_form
+	max-width: 420px
+	margin: auto
+	position: relative
+	h2
+		text-align: center
+		font-weight: normal
